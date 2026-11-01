@@ -1,0 +1,346 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #151513;
+    color: #f5f0e8;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+    --fondo: #151513;
+    --fondo-secundario: #201f1b;
+    --dorado: #c7a56a;
+    --crema: #f5f0e8;
+    --gris: #b7b3aa;
+}
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
+.navbar {
+    background-color: #151513;
+    padding: 22px 0;
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--crema);
+}
+
+.navbar-brand span,
+footer span {
+    color: var(--dorado);
+}
+
+.nav-link {
+    color: var(--crema);
+    margin-left: 20px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--dorado);
+}
+
+/* =========================
+   PORTADA PRINCIPAL
+========================= */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.subtitulo {
+    color: var(--dorado);
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 75px);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--dorado);
+}
+
+.hero p {
+    color: #e0ded8;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn-principal,
+.btn-secundario {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-principal {
+    background-color: var(--dorado);
+    color: #151513;
+    border: 1px solid var(--dorado);
+}
+
+.btn-principal:hover {
+    background-color: transparent;
+    color: var(--dorado);
+}
+
+.btn-secundario {
+    color: var(--dorado);
+    border: 1px solid var(--dorado);
+    margin-top: 15px;
+}
+
+.btn-secundario:hover {
+    background-color: var(--dorado);
+    color: var(--fondo);
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+.seccion {
+    padding: 100px 0;
+}
+
+.seccion h2 {
+    font-size: clamp(30px, 4vw, 45px);
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.seccion p:not(.subtitulo) {
+    color: var(--gris);
+    line-height: 1.9;
+}
+
+.nosotros {
+    background-color: var(--fondo);
+}
+
+.imagen-nosotros {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+/* =========================
+   MENÚ
+========================= */
+
+.menu {
+    background-color: var(--fondo-secundario);
+}
+
+.platillo {
+    background-color: #292720;
+    padding-bottom: 25px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.platillo:hover {
+    transform: translateY(-8px);
+}
+
+.platillo img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.platillo h3 {
+    font-size: 21px;
+    margin: 22px 10px 10px;
+    font-weight: 400;
+}
+
+.platillo p {
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.platillo span {
+    color: var(--dorado);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* =========================
+   GALERÍA
+========================= */
+
+.galeria {
+    background-color: var(--fondo);
+}
+
+.galeria img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.galeria img:hover {
+    transform: scale(1.03);
+}
+
+/* =========================
+   RESERVACIONES
+========================= */
+
+.reservaciones {
+    background-color: var(--fondo-secundario);
+}
+
+.formulario {
+    max-width: 550px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 15px;
+    background-color: #151513;
+    border: 1px solid #514c40;
+    color: white;
+    outline: none;
+}
+
+.formulario input:focus {
+    border-color: var(--dorado);
+}
+
+.formulario button {
+    cursor: pointer;
+}
+
+#mensajeReserva {
+    margin-top: 20px;
+}
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+    background-color: #10100f;
+    text-align: center;
+    padding: 55px 20px 30px;
+}
+
+footer h3 {
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+footer p {
+    color: var(--gris);
+    margin-top: 15px;
+}
+
+.redes {
+    margin: 25px 0;
+}
+
+.redes i {
+    color: var(--dorado);
+    font-size: 22px;
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 35px;
+}
+
+footer small {
+    color: #777;
+}
+
+/* =========================
+   ADAPTACIÓN A CELULARES
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .seccion {
+        padding: 65px 0;
+    }
+
+    .imagen-nosotros {
+        height: 300px;
+    }
+
+    .platillo img {
+        height: 220px;
+    }
+
+    .galeria img {
+        height: 230px;
+    }
+}
